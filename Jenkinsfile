@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/your-repo/task-manager.git'
+                git 'https://github.com/sedky10/DevOps-Task-Management-Application.git'
             }
         }
         stage('Install Dependencies') {
