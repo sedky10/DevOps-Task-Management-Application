@@ -1,0 +1,14 @@
+- hosts: localhost
+  tasks:
+    - name: Build Docker image
+      docker_image:
+        path: .
+        name: task-manager
+        tag: latest
+
+    - name: Run Docker container
+      docker_container:
+        name: task-manager
+        image: task-manager:latest
+        ports:
+          - "8000:8000"
